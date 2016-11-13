@@ -46,7 +46,50 @@ public class Faculty {
         else{
             System.out.println("No such username");
         }
+        choice();
      
 }
+    public void choice(){
+        System.out.println("Which one you want to edit :");
+        System.out.println("1. add user name and password for the user\n2.set number of questions\n3.marks for each question\n4.time duration\n5.Exit ");
+        Scanner b = new Scanner (System.in);
+        int ch = b.nextInt();
+        switch(ch){
+            case 1 : 
+                this.usnps();
+                break;
+            case 2 :
+                this.setqns();
+                break;
+            case 3 :
+                this.setmarks();
+                break;
+            case 4 :
+                this.settime();
+                break;
+            case 5 :
+                break;
+            default :
+                System.out.println("Wrong choice");
+                choice();
+                break;
+        }
+    }
+    public void usnps(){
+        AddStudent as = new AddStudent();
+        as.student();
+    }
+    public void setqns(){
+        SetQns q = new SetQns();
+        q.qns();
+    }
+    public void setmarks(){
+        SetQns q = new SetQns();
+        q.marks();
+    }
+    public void settime(){
+        SetQns q = new SetQns();
+        q.time();
+    }
 }
     
