@@ -6,6 +6,7 @@
 package cbt;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
@@ -15,29 +16,28 @@ import java.util.Scanner;
 public class Student {
     String username, password;
     Boolean flag;
-    public void login (){ 
+    public void login () throws FileNotFoundException{ 
         String uname,paswd;
         Scanner s = new Scanner(System.in);
         System.out.println("Enter username : ");
-        uname = s.readline();
+        uname = s.nextLine();
         System.out.println("Enter password :");
-        paswd = s.readline();
+        paswd = s.nectLine();
         FileInputStream fis = new FileInputStream("Studentlog.txt");
-        String inpt ;
-        while((inpt = fis.readLine()) != null){
-            for(String val: input.split(" ")){
-                if(uname == val){
-                    if(paswd == input.split(" ")[1]){
-                    flag=True;
+        String inpt = null ;
+       {
+            for(String val: inpt.split(" ")){
+            if(uname.equals(val)){
+                if(paswd.equals(inpt.split(" ")[1])){
+                    flag=true;
                     } 
                     else{
                     System.out.println("Invalid Credentials");
-                    return false;
                     }
                 }
-                input = f.readline();
+                inpt = fis.nextLine();
             }
-            if(flag == True){
+            if(flag == true){
             System.out.println("Login successful");
             }
             else{
@@ -45,6 +45,6 @@ public class Student {
             }
         }
         
-    }
+    
 
 }

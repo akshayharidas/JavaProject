@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 package cbt;
-import java.sql.DriverManager;
-import java.sql.Connection;
-import java.sql.SQLException;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 /**
  *
@@ -17,7 +15,7 @@ public class CBT {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         // TODO code application logic here
         System.out.println("Select Category");
         System.out.println("1.Student");
