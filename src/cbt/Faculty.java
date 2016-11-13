@@ -5,8 +5,11 @@
  */
 package cbt;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -16,26 +19,26 @@ import java.util.Scanner;
 public class Faculty {
      String username, password;
     Boolean flag;
-    public void login() throws FileNotFoundException {    
+    public void login() throws FileNotFoundException, IOException {    
     String uname,paswd;
     Scanner s = new Scanner(System.in);
     System.out.println("Enter username : ");
     uname = s.nextLine();
     System.out.println("Enter password :");
     paswd = s.nextLine();
-    FileInputStream fis = new FileInputStream("Facultylog.txt");
+    BufferedReader br = new BufferedReader(new FileReader("Facultylog.txt"));
     String inpt = null ;
-   
-        for(String val: inpt.split(" ")){
-            if(uname == val){
-                if(paswd == inpt.split(" ")[1]){
+   while((inpt =br.readLine()) != null){
+       String[] element;
+        element = inpt.split(",");
+            if(uname.equals(element[0]) && paswd.equals(element[1])){
                     flag=true;
                 } 
                 else{
                 System.out.println("Invalid Credentials");
                 }
-            }
-            inpt = fis.readline();
+            
+           
         }
         if(flag == true){
             System.out.println("Login successful");
@@ -44,5 +47,6 @@ public class Faculty {
             System.out.println("No such username");
         }
      
+}
 }
     
