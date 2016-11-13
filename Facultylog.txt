@@ -1,3 +1,0 @@
-﻿admin admin
-user 123456
-
