@@ -24,13 +24,13 @@ public class SetQns {
                 this.mcq();
                 break;
             case 2 :
-                this.fib();
+                this.fb();
                 break;
             case 3 :
-                this.tof();
+                this.tf();
                 break;
             case 4 :
-                this.mcqoa();
+                this.mcqmore();
                 break;
             case 5 :
                 break;
@@ -58,11 +58,16 @@ public void mcq(){
         String d = c.nextLine();
         System.out.println("Enter option 4 ");
         String f = c.nextLine();
+        System.out.println("Enter ans ");
+        String o = c.nextLine();
         try{
-            PrintWriter writer = new PrintWriter(new FileWriter("sample.txt", true));
+            PrintWriter writer = new PrintWriter(new FileWriter("mcq.txt", true));
            
             writer.println(qns + "\n1."+ a +"\n2."+ b +"\n3."+ d + "\n4."+f);
             writer.close();
+            PrintWriter ans = new PrintWriter(new FileWriter("amcq.txt", true));
+             ans.println(o );
+            ans.close();
            } 
         catch (IOException e) {
             System.out.println("Error");
@@ -70,7 +75,7 @@ public void mcq(){
         
     }
 }
-public void fib(){
+public void fb(){
     System.out.println("How many qns u want to add ?");
     Scanner c = new Scanner(System.in);
     int n = c.nextInt();
@@ -82,10 +87,72 @@ public void fib(){
         System.out.println("Enter Answer ");
         String f = c.nextLine();
         try{
-            PrintWriter writer = new PrintWriter(new FileWriter("sample.txt", true));
+            PrintWriter writer = new PrintWriter(new FileWriter("fb.txt", true));
            
-            writer.println(qns + "\n."+ f);
+            writer.println(qns );
+            PrintWriter ans = new PrintWriter(new FileWriter("afb.txt", true));
+             ans.println(f );
+            ans.close();
             writer.close();
+           } 
+        catch (IOException e) {
+            System.out.println("Error");
+        }
+        
+    }
+}
+public void tf(){
+    System.out.println("How many qns u want to add ?");
+    Scanner c = new Scanner(System.in);
+    int n = c.nextInt();
+    for(int i=0;i<n;i++){
+        System.out.println("Enter Your Qns ");
+        String qns = c.nextLine();
+         qns = c.nextLine();
+        
+        System.out.println("Enter Answer ");
+        String f = c.nextLine();
+        try{
+            PrintWriter writer = new PrintWriter(new FileWriter("tf.txt", true));
+           
+            writer.println(qns );
+            writer.close();
+            PrintWriter ans = new PrintWriter(new FileWriter("atf.txt", true));
+             ans.println(f );
+            ans.close();
+           } 
+        catch (IOException e) {
+            System.out.println("Error");
+        }
+        
+    }
+}
+public void mcqmore(){
+    System.out.println("How many qns u want to add ?");
+    Scanner c = new Scanner(System.in);
+    int n = c.nextInt();
+    for(int i=0;i<n;i++){
+        System.out.println("Enter Your Qns ");
+        String qns = c.nextLine();
+         qns = c.nextLine();
+        System.out.println("Enter option 1 ");
+        String a = c.nextLine();
+        System.out.println("Enter option 2 ");
+        String b = c.nextLine();
+        System.out.println("Enter option 3 ");
+        String d = c.nextLine();
+        System.out.println("Enter option 4 ");
+        String f = c.nextLine();
+        System.out.println("Enter Ans ");
+        String o = c.nextLine();
+        try{
+            PrintWriter writer = new PrintWriter(new FileWriter("mcqmore.txt", true));
+           
+            writer.println(qns + "\n1."+ a +"\n2."+ b +"\n3."+ d + "\n4."+f);
+            writer.close();
+            PrintWriter ans = new PrintWriter(new FileWriter("amcqmore.txt", true));
+             ans.println(o );
+            ans.close();
            } 
         catch (IOException e) {
             System.out.println("Error");
