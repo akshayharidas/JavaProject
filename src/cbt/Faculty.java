@@ -51,7 +51,7 @@ public class Faculty {
 }
     public void choice(){
         System.out.println("Which one you want to edit :");
-        System.out.println("1. add user name and password for the user\n2.set number of questions\n3.marks for each question\n4.time duration\n5.Exit ");
+        System.out.println("1. add user name and password for the user\n2.set number of questions\n3.time duration\n4.Exit ");
         Scanner b = new Scanner (System.in);
         int ch = b.nextInt();
         switch(ch){
@@ -61,13 +61,11 @@ public class Faculty {
             case 2 :
                 this.setqns();
                 break;
+            
             case 3 :
-                this.setmarks();
-                break;
-            case 4 :
                 this.settime();
                 break;
-            case 5 :
+            case 4 :
                 break;
             default :
                 System.out.println("Wrong choice");
@@ -83,10 +81,7 @@ public class Faculty {
         SetQns q = new SetQns();
         q.qns();
     }
-    public void setmarks(){
-        SetQns q = new SetQns();
-        q.marks();
-    }
+    
     public void settime(){
         SetQns q = new SetQns();
         q.time();

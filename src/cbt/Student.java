@@ -75,11 +75,22 @@ public class Student {
                     break;
                 default :
                     System.out.println("Wrong choice");
-                    choice();
+                    option();
                     break;
             }
         }
 
-
+public void mcq(){
+    
+}
+public void fb(){
+    
+}
+public void tf(){
+    
+}
+public void mcqmore(){
+    
+}
 
 }

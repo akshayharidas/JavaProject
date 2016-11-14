@@ -60,10 +60,12 @@ public void mcq(){
         String f = c.nextLine();
         System.out.println("Enter ans ");
         String o = c.nextLine();
+        System.out.println("Enter mark ");
+        int m = c.nextInt();
         try{
             PrintWriter writer = new PrintWriter(new FileWriter("mcq.txt", true));
            
-            writer.println(qns + "\n1."+ a +"\n2."+ b +"\n3."+ d + "\n4."+f);
+            writer.println(qns + "\n1."+ a +"\n2."+ b +"\n3."+ d + "\n4."+f+"\n\t\t\t"+m);
             writer.close();
             PrintWriter ans = new PrintWriter(new FileWriter("amcq.txt", true));
              ans.println(o );
@@ -86,10 +88,12 @@ public void fb(){
         
         System.out.println("Enter Answer ");
         String f = c.nextLine();
+        System.out.println("Enter mark ");
+        int m = c.nextInt();
         try{
             PrintWriter writer = new PrintWriter(new FileWriter("fb.txt", true));
            
-            writer.println(qns );
+            writer.println(qns + "\n\t\t"+m);
             PrintWriter ans = new PrintWriter(new FileWriter("afb.txt", true));
              ans.println(f );
             ans.close();
@@ -112,10 +116,12 @@ public void tf(){
         
         System.out.println("Enter Answer ");
         String f = c.nextLine();
+        System.out.println("Enter mark ");
+        int m = c.nextInt();
         try{
             PrintWriter writer = new PrintWriter(new FileWriter("tf.txt", true));
            
-            writer.println(qns );
+            writer.println(qns + "\n\t\t" +m );
             writer.close();
             PrintWriter ans = new PrintWriter(new FileWriter("atf.txt", true));
              ans.println(f );
@@ -145,10 +151,12 @@ public void mcqmore(){
         String f = c.nextLine();
         System.out.println("Enter Ans ");
         String o = c.nextLine();
+        System.out.println("Enter mark ");
+        int m = c.nextInt();
         try{
             PrintWriter writer = new PrintWriter(new FileWriter("mcqmore.txt", true));
            
-            writer.println(qns + "\n1."+ a +"\n2."+ b +"\n3."+ d + "\n4."+f);
+            writer.println(qns + "\n1."+ a +"\n2."+ b +"\n3."+ d + "\n4."+f+ "\n\t\t"+m);
             writer.close();
             PrintWriter ans = new PrintWriter(new FileWriter("amcqmore.txt", true));
              ans.println(o );

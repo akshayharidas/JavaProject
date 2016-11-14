@@ -3,21 +3,22 @@ Q1. Who is the Prime Minister of India?
 2. Manmohan Singh
 3. Rahul Gandhi
 4. Pranabh Mukherjee
-
+		1
 Q2. Who is the President of India?
 1. Narendra Modi
 2. Manmohan Singh
 3. Rahul Gandhi
 4. Pranabh Mukherjee
-
+		1
 Q1. Who is the former Prime Minister of India?
 1. Narendra Modi
 2. Manmohan Singh
 3. Rahul Gandhi
 4. Pranabh Mukherjee
-
+		1
 Q1. Which is the capital city of India?
 1. Mumbai
 2. New Delhi
 3. Kolkata
 4. Kochi
+		1
