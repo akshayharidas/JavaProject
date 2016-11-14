@@ -47,7 +47,7 @@ public void mcq(){
     Scanner c = new Scanner(System.in);
     int n = c.nextInt();
     for(int i=0;i<n;i++){
-        System.out.println("Enter Your Qns ");
+        System.out.println("Enter Your Qns(Add ?(quesion mark) at the end) ");
         String qns = c.nextLine();
          qns = c.nextLine();
         System.out.println("Enter option 1 ");
@@ -82,7 +82,7 @@ public void fb(){
     Scanner c = new Scanner(System.in);
     int n = c.nextInt();
     for(int i=0;i<n;i++){
-        System.out.println("Enter Your Qns ");
+        System.out.println("Enter Your Qns(Add .(Full stop) at the end) ");
         String qns = c.nextLine();
          qns = c.nextLine();
         
@@ -110,9 +110,9 @@ public void tf(){
     Scanner c = new Scanner(System.in);
     int n = c.nextInt();
     for(int i=0;i<n;i++){
-        System.out.println("Enter Your Qns ");
+        System.out.println("Enter Your Qns (Add .(Full stop) at the end) ");
         String qns = c.nextLine();
-         qns = c.nextLine();
+         qns = c.nextLine(); 
         
         System.out.println("Enter Answer ");
         String f = c.nextLine();
@@ -138,7 +138,7 @@ public void mcqmore(){
     Scanner c = new Scanner(System.in);
     int n = c.nextInt();
     for(int i=0;i<n;i++){
-        System.out.println("Enter Your Qns ");
+        System.out.println("Enter Your Qns (Add ?(quesion mark) at the end) ");
         String qns = c.nextLine();
          qns = c.nextLine();
         System.out.println("Enter option 1 ");
@@ -168,10 +168,8 @@ public void mcqmore(){
         
     }
 }
-public void marks(){
-    
-}
 public void time(){
+    
 }
 }
 

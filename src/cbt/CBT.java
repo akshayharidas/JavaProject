@@ -28,10 +28,13 @@ public class CBT {
             Student s = new Student();
             s.login();
           }
-        else{
+        else if( ca == 2){
             Faculty f = new Faculty();
             f.login();   
-        }    
+        } 
+        else{
+            System.out.println("Invalid entry");
+        }
     }
     
 }

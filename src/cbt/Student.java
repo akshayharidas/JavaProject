@@ -81,7 +81,13 @@ public class Student {
         }
 
 public void mcq(){
-    
+    BufferedReader br = new BufferedReader(new FileReader("mcq.txt"));
+    String inpt = null ;
+    while((line = b.readLine()) != null){
+    String[] element;
+        element = inpt.split(".");
+        
+    }
 }
 public void fb(){
     
