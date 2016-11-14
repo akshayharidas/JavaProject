@@ -19,10 +19,10 @@ import java.util.Scanner;
 public class Student {
     String username, password;
     Boolean flag;
-    
-    
-    
-    public void login () throws FileNotFoundException, IOException{ 
+
+
+
+    public void login () throws FileNotFoundException, IOException{
         String uname,paswd;
         Scanner s = new Scanner(System.in);
         System.out.println("Enter username : ");
@@ -36,24 +36,50 @@ public class Student {
         element = inpt.split(",");
             if(uname.equals(element[0]) && paswd.equals(element[1])){
                     flag=true;
-                } 
+                }
                 else{
                 System.out.println("Invalid Credentials");
                 }
                 }
-               
-            
+
+
             if(flag == true){
             System.out.println("Login successful");
-            
+
             }
             else{
             System.out.println("No such username");
             }
+            option();
         }
-        
-    
+
+    public void option(){
+            System.out.println("Which type of questions do you want ?");
+            System.out.println("1.MCQ \n2.Fill in the blanks\n3. True or False \n4.MCQ with more than one correct\n5.Exit ");
+            Scanner b = new Scanner (System.in);
+            int ch = b.nextInt();
+            switch(ch){
+                case 1 :
+                  this.mcq();
+                    break;
+                case 2 :
+                    this.fb();
+                    break;
+                case 3 :
+                    this.tf();
+                    break;
+                case 4 :
+                    this.mcqmore();
+                    break;
+                case 5 :
+                    break;
+                default :
+                    System.out.println("Wrong choice");
+                    choice();
+                    break;
+            }
+        }
+
+
 
 }
-
-    
