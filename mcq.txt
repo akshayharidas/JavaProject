@@ -1,24 +1,31 @@
-Q1. Who is the Prime Minister of India?
+Q. Who is the Prime Minister of India?
+1. Narendra Modi
+2. Manmohan Singh
+3. Rahul Gandhi
+4. Pranabh Mukherjee	
+
+Q. Who is the President of India?
 1. Narendra Modi
 2. Manmohan Singh
 3. Rahul Gandhi
 4. Pranabh Mukherjee
-		1
-Q2. Who is the President of India?
+
+Q. Who is the former Prime Minister of India?
 1. Narendra Modi
 2. Manmohan Singh
 3. Rahul Gandhi
 4. Pranabh Mukherjee
-		1
-Q1. Who is the former Prime Minister of India?
-1. Narendra Modi
-2. Manmohan Singh
-3. Rahul Gandhi
-4. Pranabh Mukherjee
-		1
-Q1. Which is the capital city of India?
+
+Q. Which is the capital city of India?
 1. Mumbai
 2. New Delhi
 3. Kolkata
 4. Kochi
-		1
+
+Who is the founder apple INC?
+1.steve jobs
+2.mark zuckerberg
+3.steve john
+4.donald trump
+			
+

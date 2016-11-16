@@ -1,25 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package cbt;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.NullPointerException;
 import java.util.Scanner;
 
-/**
- *
- * @author cv
- */
+
 public class Faculty {
-     String username, password;
+     String username, password; 
     Boolean flag;
-    public void login() throws FileNotFoundException, IOException {    
+    public void login() throws FileNotFoundException, IOException, NullPointerException {    
     String uname,paswd;
     Scanner s = new Scanner(System.in);
     System.out.println("Enter username : ");
@@ -31,12 +22,13 @@ public class Faculty {
    while((inpt =br.readLine()) != null){
        String[] element;
         element = inpt.split(",");
-            if(uname.equals(element[0]) && paswd.equals(element[1])){
+            if(uname.equals(element[0])) {
+                if(paswd.equals(element[1])){
                     flag=true;
                 } 
                 else{
                 System.out.println("Invalid Credentials");
-                }
+                }}
             
            
         }
@@ -61,11 +53,13 @@ public class Faculty {
             case 2 :
                 this.setqns();
                 break;
-            
             case 3 :
-                this.settime();
+                this.setmarks();
                 break;
             case 4 :
+                this.settime();
+                break;
+            case 5 :
                 break;
             default :
                 System.out.println("Wrong choice");
@@ -82,9 +76,12 @@ public class Faculty {
         q.qns();
     }
     
+    public void setmarks(){
+        SetQns q = new SetQns();
+        q.mark();
+    }
     public void settime(){
         SetQns q = new SetQns();
         q.time();
     }
 }
-    
