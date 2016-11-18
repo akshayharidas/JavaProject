@@ -5,8 +5,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.lang.NullPointerException;
 import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class Student {
     String username, password;
@@ -31,14 +33,14 @@ public class Student {
                     flag=true;
                 }
                 else{
-                System.out.println("Invalid Credentials\n\n");
+                System.out.println("\n\nInvalid Credentials\n\n");
                 }
                 }
             }
 
 
             if(flag == true){
-            System.out.println("Login successful\n\n");
+            System.out.println("\n\nLogin successful*\n\n");
 
             }
             else{
@@ -47,9 +49,11 @@ public class Student {
             choice();
         }
     public void choice() throws IOException{
-
-        System.out.println("Select your choice:");
-        System.out.println("1.Start exam \n2.Marks Scored\n3.logout ");
+        System.out.println("---------------------------------------------------");
+        System.out.println("               Student Login"                       );
+        System.out.println("---------------------------------------------------");
+        System.out.println("\nSelect your choice:\n");
+        System.out.println("1.Start exam \n2.Marks Scored\n3.logout\n ");
         Scanner z = new Scanner(System.in);
         int i = z.nextInt();
         switch(i){
@@ -60,7 +64,7 @@ public class Student {
                   //mark();
                     break;
                 case 3 :
-                  //logout();
+                  logout();
                     break;
                 case 4 :
                     break;
@@ -73,8 +77,10 @@ public class Student {
             }
 
     public void option() throws IOException{
-            System.out.println("Which type of questions do you want ?");
-            System.out.println("1.MCQ \n2.Fill in the blanks\n3. True or False \n4.MCQ with more than one correct\n5.Exit ");
+            new Reminder(1*30);
+            System.out.println("\\Task scheduled.");
+            System.out.println("\nWhich type of questions do you want ?");
+            System.out.println("\n1.MCQ \n2.Fill in the blanks\n3. True or False \n4.MCQ with more than one correct\n5.Exit\n");
             Scanner b = new Scanner (System.in);
             int ch = b.nextInt();
             switch(ch){
@@ -82,13 +88,13 @@ public class Student {
                   this.mcq();
                     break;
                 case 2 :
-                    //this.fb();
+                    this.fb();
                     break;
                 case 3 :
-                    //this.tf();
+                    this.tf();
                     break;
                 case 4 :
-                    //this.mcqmore();
+                    this.mcqmore();
                     break;
                 case 5 :
                     break;
@@ -100,44 +106,193 @@ public class Student {
         }
 
 public void mcq() throws IOException{
-    BufferedReader br = new BufferedReader(new FileReader("mcq.txt"));
-    String line;
-    int count=1;
+   
+    BufferedReader br1 = new BufferedReader(new FileReader("amcq.txt"));
+     int mark =0;
+    try( BufferedReader br = new BufferedReader(new FileReader("mcq.txt"));){
+       String line;
+       
+        int count=1; 
     while((line = br.readLine()) != null){
-        PrintWriter writer = new PrintWriter(new FileWriter("test.txt", true));
-        System.out.println(line);
+       
+        System.out.println("\n"+line);
+        count++; 
     if(count % 6 ==0)
     {
-        System.out.println("Enter Option");
-        Scanner a = new Scanner(System.in);
+        System.out.println("Enter Option\n");
+        Scanner a = new Scanner(System.in); 
         String n = a.nextLine();
-        writer.println(n);
+        
+         String ans = br1.readLine();
 
-      //  mark();
+         if(n.equals(ans)){
+                System.out.println("\nCorrect!");
+                  mark++;
+                  count=0;
+              }
+              
+              else{
+                System.out.println("\nWrong!");
+              }
+          }
+      }
+
+     }catch (IOException e) {
+      e.printStackTrace();
     }
-    count++;
-    writer.close();
+    System.out.println("\nScore bored :" + mark);
+  }
+      
+  
+    
+    
+
+
+
+
+public void fb() throws IOException{
+    
+     BufferedReader br1 = new BufferedReader(new FileReader("afb.txt"));
+     int mark =0;
+    try( BufferedReader br = new BufferedReader(new FileReader("fb.txt"));){
+       String line;
+       
+        int count=1; 
+    while((line = br.readLine()) != null){
+       
+        System.out.println(line);
+        count++; 
+    if(count % 2 ==0)
+    {
+        System.out.println("\nEnter Option");
+        Scanner a = new Scanner(System.in); 
+        String n = a.nextLine();
+       
+         String ans = br1.readLine();
+
+         if(n.equals(ans)){
+                System.out.println("\nCorrect!");
+                  mark++;
+                  count=0;
+              }
+              
+              else{
+                System.out.println("\nWrong!");
+              }
+          }
+      }
+
+     }catch (IOException e) {
+      e.printStackTrace();
     }
+    System.out.println("\nScore bored :" + mark);
+  }
+
+
+
+public void tf() throws IOException{
+    BufferedReader br1 = new BufferedReader(new FileReader("atf.txt"));
+     int mark =0;
+    try( BufferedReader br = new BufferedReader(new FileReader("tf.txt"));){
+       String line;
+       
+        int count=1; 
+    while((line = br.readLine()) != null){
+       
+        System.out.println("\n"+line);
+        count++; 
+    if(count % 2 ==0)
+    {
+        System.out.println("\nEnter Option");
+        Scanner a = new Scanner(System.in); 
+        String n = a.nextLine();
+        
+         String ans = br1.readLine();
+
+         if(n.equals(ans)){
+                System.out.println("\nCorrect!");
+                  mark++;
+                  count=0;
+              }
+              
+              else{
+                System.out.println("\nWrong!");
+              }
+          }
+      }
+
+     }catch (IOException e) {
+      e.printStackTrace();
+    }
+    System.out.println("\nScore bored :" + mark);
 }
-//public void mark(){
-  //   Marks m = new Marks();
-    // m.marks();
+public void mcqmore() throws IOException{
+    BufferedReader br1 = new BufferedReader(new FileReader("amcqmore.txt"));
+     int mark =0;
+    try( BufferedReader br = new BufferedReader(new FileReader("mcqmore.txt"));){
+       String line;
+       
+        int count=1; 
+    while((line = br.readLine()) != null){
+       
+        System.out.println("\n"+line);
+        count++; 
+    if(count % 6 ==0)
+    {
+        System.out.println("\nEnter Option");
+        Scanner a = new Scanner(System.in); 
+        String n = a.nextLine();
+       
+        /*String[] element; 
+        element = inpt.split(",");    
+        if(a.equals(element[i]) || a.equals(element[i+1])){
+         System.out.println("Correct!");*/
+
+
+         String ans = br1.readLine();
+
+         if(n.equals(ans)){
+                System.out.println("\nCorrect!");
+                  mark++;
+                  count=0;
+              }
+              
+              else{
+                System.out.println("\nWrong!");
+              }
+          }
+      }
+
+     }catch (IOException e) {
+      e.printStackTrace();
+    }
+    System.out.println("\nScore bored :" + mark);
+}
+
+public void logout(){
+  System.exit(0);
+}
+
 
 }
 
-//public void fb() throws IOException{
-    
-    
-//
-//}
-//public void tf(){
-    
-//}
-//public void mcqmore(){
-    
-//}
-//public void logout(){
 
-//}
+class Reminder extends Student{
+    Timer timer;
 
-//}
+    public Reminder(int seconds) {
+        timer = new Timer();
+        timer.schedule(new RemindTask(), seconds*1000);
+  }
+
+    class RemindTask extends TimerTask {
+        public void run() {
+
+            System.out.println("\nTime's up!");
+            //System.out.println("\nScore bored :" + mark);
+            timer.cancel(); //Terminate the timer thread
+            System.exit(0);
+
+        }
+    } 
+}
