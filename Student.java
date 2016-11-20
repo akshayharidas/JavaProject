@@ -58,11 +58,11 @@ public class Student {
         int i = z.nextInt();
         switch(i){
                 case 1 :
-                  this.option();
+                  this.rule();
                     break;
                 case 2 :
-                  //mark();
-                    break;
+                  //mark()
+;                    break;
                 case 3 :
                   logout();
                     break;
@@ -75,14 +75,27 @@ public class Student {
                     break;
             }
             }
+     public void rule() throws IOException{
+          Rules r = new Rules();
+             r.rules();
+            System.out.println("press y to continue");
+          Scanner az = new Scanner(System.in);
+              char z = az.nextLine().charAt(0);
+             if(z == 'y' || z =='Y'){
+            option();}
+            else
+               System.out.println("Wrong entry");
 
+    }
     public void option() throws IOException{
-            new Reminder(1*30);
-            System.out.println("\\Task scheduled.");
+            
+            
             System.out.println("\nWhich type of questions do you want ?");
             System.out.println("\n1.MCQ \n2.Fill in the blanks\n3. True or False \n4.MCQ with more than one correct\n5.Exit\n");
             Scanner b = new Scanner (System.in);
             int ch = b.nextInt();
+            new Reminder(1*60);
+            System.out.println("Task scheduled*");
             switch(ch){
                 case 1 :
                   this.mcq();
@@ -97,6 +110,7 @@ public class Student {
                     this.mcqmore();
                     break;
                 case 5 :
+                    this.exit();
                     break;
                 default :
                     System.out.println("Wrong choice");
@@ -140,14 +154,16 @@ public void mcq() throws IOException{
      }catch (IOException e) {
       e.printStackTrace();
     }
-    System.out.println("\nScore bored :" + mark);
+    System.out.println("\nScore board :" + mark);
   }
       
   
     
     
 
-
+public void exit() throws IOException{
+  System.exit(0);
+}
 
 
 public void fb() throws IOException{
@@ -185,7 +201,8 @@ public void fb() throws IOException{
      }catch (IOException e) {
       e.printStackTrace();
     }
-    System.out.println("\nScore bored :" + mark);
+    System.out.println("\nScore board :" + mark);
+    
   }
 
 
@@ -224,7 +241,7 @@ public void tf() throws IOException{
      }catch (IOException e) {
       e.printStackTrace();
     }
-    System.out.println("\nScore bored :" + mark);
+    System.out.println("\nScore board :" + mark);
 }
 public void mcqmore() throws IOException{
     BufferedReader br1 = new BufferedReader(new FileReader("amcqmore.txt"));

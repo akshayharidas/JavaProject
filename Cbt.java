@@ -3,6 +3,11 @@ import java.io.IOException;
 import java.util.Scanner;
 
 
+class interface
+{
+    public void login();
+}
+
 public class Cbt {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {

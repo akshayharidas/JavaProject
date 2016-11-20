@@ -159,9 +159,7 @@ public void mcqmore(){
         
     }
 }
-public void mark(){
-    
-}
+
 public void time(){
     
 }
