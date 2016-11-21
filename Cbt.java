@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 
-class interface
+interface loginpage
 {
     public void login();
 }
@@ -12,7 +12,7 @@ public class Cbt {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
         
-        System.out.println("Select Category");
+        System.out.println("\nSelect Category");
         System.out.println("1.Student");
         System.out.println("2.Faculty");
         Scanner cat = new Scanner(System.in);

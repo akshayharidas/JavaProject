@@ -53,22 +53,18 @@ public class Student {
         System.out.println("               Student Login"                       );
         System.out.println("---------------------------------------------------");
         System.out.println("\nSelect your choice:\n");
-        System.out.println("1.Start exam \n2.Marks Scored\n3.logout\n ");
+        System.out.println("1.Start exam \n2.logout\n ");
         Scanner z = new Scanner(System.in);
         int i = z.nextInt();
         switch(i){
                 case 1 :
                   this.rule();
                     break;
+               
                 case 2 :
-                  //mark()
-;                    break;
-                case 3 :
                   logout();
                     break;
-                case 4 :
-                    break;
-                
+                                
                 default :
                     System.out.println("Wrong choice");
                     option();
