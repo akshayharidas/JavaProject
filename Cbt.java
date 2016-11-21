@@ -11,7 +11,9 @@ interface loginpage
 public class Cbt {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        
+        System.out.println("---------------------------------------------------");
+        System.out.println("               Welcome"                       );
+        System.out.println("---------------------------------------------------");
         System.out.println("\nSelect Category");
         System.out.println("1.Student");
         System.out.println("2.Faculty");

@@ -19,6 +19,9 @@ public class Student {
     public void login () throws FileNotFoundException, IOException, NullPointerException{
         String uname,paswd;
         Scanner s = new Scanner(System.in);
+         System.out.println("---------------------------------------------------");
+        System.out.println("               Student Login"                       );
+        System.out.println("---------------------------------------------------");
         System.out.println("Enter username : ");
         uname = s.nextLine();
         System.out.println("Enter password :");
@@ -304,8 +307,10 @@ class Reminder extends Student{
 
     class RemindTask extends TimerTask {
         public void run() {
-
+            // if(timer == 30)
+            //   {System.out.println("30sec remanning");}
             System.out.println("\nTime's up!");
+            System.out.println("You can no longer submit an answer.");
             //System.out.println("\nScore bored :" + mark);
             timer.cancel(); //Terminate the timer thread
             System.exit(0);

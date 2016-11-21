@@ -13,6 +13,9 @@ public class Faculty {
     public void login() throws FileNotFoundException, IOException, NullPointerException {    
     String uname,paswd;
     Scanner s = new Scanner(System.in);
+    System.out.println("---------------------------------------------------");
+    System.out.println("               Faculty Login"                       );
+    System.out.println("---------------------------------------------------");
     System.out.println("Enter username : ");
     uname = s.nextLine();
     System.out.println("Enter password :");
