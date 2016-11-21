@@ -74,13 +74,13 @@ public class Student {
      public void rule() throws IOException{
           Rules r = new Rules();
              r.rules();
-            System.out.println("press y to continue");
+            System.out.println("\npress y to continue");
           Scanner az = new Scanner(System.in);
               char z = az.nextLine().charAt(0);
              if(z == 'y' || z =='Y'){
             option();}
             else
-               System.out.println("Wrong entry");
+               System.out.println("\nWrong entry");
 
     }
     public void option() throws IOException{
@@ -91,7 +91,7 @@ public class Student {
             Scanner b = new Scanner (System.in);
             int ch = b.nextInt();
             new Reminder(1*60);
-            System.out.println("Task scheduled*");
+            System.out.println("You are about to begin!");
             switch(ch){
                 case 1 :
                   this.mcq();
@@ -109,7 +109,7 @@ public class Student {
                     this.exit();
                     break;
                 default :
-                    System.out.println("Wrong choice");
+                    System.out.println("\nWrong choice");
                     option();
                     break;
             }
@@ -151,6 +151,7 @@ public void mcq() throws IOException{
       e.printStackTrace();
     }
     System.out.println("\nScore board :" + mark);
+    System.exit(0);
   }
       
   
@@ -198,6 +199,7 @@ public void fb() throws IOException{
       e.printStackTrace();
     }
     System.out.println("\nScore board :" + mark);
+    System.exit(0);
     
   }
 
@@ -238,6 +240,7 @@ public void tf() throws IOException{
       e.printStackTrace();
     }
     System.out.println("\nScore board :" + mark);
+    System.exit(0);
 }
 public void mcqmore() throws IOException{
     BufferedReader br1 = new BufferedReader(new FileReader("amcqmore.txt"));
@@ -280,6 +283,7 @@ public void mcqmore() throws IOException{
       e.printStackTrace();
     }
     System.out.println("\nScore bored :" + mark);
+    System.exit(0);
 }
 
 public void logout(){

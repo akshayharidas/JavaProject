@@ -46,7 +46,7 @@ public class Faculty {
         System.out.println("               Faculty Login"                       );
         System.out.println("---------------------------------------------------");
         System.out.println("\nWhich one you want to edit :");
-        System.out.println("\n1. add user name and password for the user\n2.set number of questions\n3.logout ");
+        System.out.println("\n1. Add user name and password for the user\n2.Set number of questions\n3.Logout ");
         Scanner b = new Scanner (System.in);
         int ch = b.nextInt();
         switch(ch){
